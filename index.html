@@ -1,0 +1,227 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suzu × Phúc Gà 💀</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #100018, #25003d, #090014);
+    min-height: 100vh;
+}
+
+header {
+    padding: 45px 15px;
+    background: linear-gradient(90deg, #8a00ff, #ff008c);
+    box-shadow: 0 0 30px #b000ff;
+}
+
+h1 {
+    font-size: clamp(30px, 7vw, 55px);
+    margin: 0;
+    text-shadow: 3px 3px #24002f;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 15px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 320px;
+    max-width: 100%;
+    padding: 25px;
+    background: #1c1028;
+    border: 2px solid #b000ff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #7800aa55;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow: 0 0 30px #d000ff;
+}
+
+.avatar {
+    font-size: 75px;
+}
+
+h2 {
+    color: #ff69db;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #8a00ff;
+    font-weight: bold;
+}
+
+.roast {
+    margin-top: 35px;
+    padding: 25px;
+    background: #200c30;
+    border-radius: 20px;
+    border: 1px solid #ff008c;
+}
+
+button {
+    padding: 14px 22px;
+    margin: 8px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    background: linear-gradient(90deg, #8a00ff, #ff008c);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+
+#joke {
+    font-size: 19px;
+    font-weight: bold;
+    color: #ff8be7;
+    min-height: 55px;
+    margin-top: 20px;
+}
+
+footer {
+    padding: 25px;
+    color: #bba8c8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>💀 SUZU × PHÚC GÀ 💀</h1>
+    <p class="subtitle">CẶP ĐÔI TẤU HÀI HUYỀN THOẠI</p>
+    <p>🎮 Chơi game là phụ — báo nhau là chính 🎮</p>
+</header>
+
+<div class="container">
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="avatar">😈</div>
+            <h2>SUZU</h2>
+            <span class="badge">TRÙM TẠO DRAMA</span>
+            <p>🎮 Nghề nghiệp: Game thủ bất ổn</p>
+            <p>⚡ Kỹ năng: Gọi Phúc Gà vào game</p>
+            <p>💬 Câu cửa miệng:</p>
+            <i>"Ê Phúc, vào game lẹ!"</i>
+        </div>
+
+        <div class="card">
+            <div class="avatar">🐔</div>
+            <h2>PHÚC GÀ</h2>
+            <span class="badge">GÀ CHIẾN VŨ TRỤ</span>
+            <p>🎮 Nghề nghiệp: Đồng đội bất ổn</p>
+            <p>⚡ Kỹ năng: Xuất hiện đúng lúc cần cà khịa</p>
+            <p>💬 Câu cửa miệng:</p>
+            <i>"Từ từ, tao đang vào!"</i>
+        </div>
+
+    </div>
+
+    <div class="roast">
+        <h2>🔥 MÁY CÀ KHỊA TỰ ĐỘNG 🔥</h2>
+        <p>Bấm nút để xem hệ thống nói gì về hai chiến thần.</p>
+
+        <button onclick="roastSuzu()">Cà khịa Suzu 😈</button>
+        <button onclick="roastPhuc()">Cà khịa Phúc Gà 🐔</button>
+        <button onclick="roastBoth()">Bóc phốt cả hai 💀</button>
+
+        <div id="joke">Chờ gì nữa? Bấm nút đi! 😂</div>
+    </div>
+
+    <div class="roast">
+        <h2>💜 TÌNH BẠN HAY GÌ KHÁC?</h2>
+        <p>Hai ông tướng online cùng nhau còn nhiều hơn thời gian ngủ.</p>
+        <p>🤝 Đồng đội trong game, chuyên gia tấu hài ngoài đời.</p>
+        <p>💀 Tình bạn này: 100% hỗn loạn, 0% bình thường.</p>
+        <p><small>Chỉ là meme trêu đùa vui vẻ nhé!</small></p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 SUZU × PHÚC GÀ | WEBSITE TẤU HÀI 💜
+</footer>
+
+<script>
+const suzu = [
+    "Suzu vừa online, cả đội tự nhiên thấy bất an 💀",
+    "Suzu không bao giờ nhận mình sai... chỉ tại đồng đội thôi! 😂",
+    "Thông báo: Suzu đã vào trận. Tỷ lệ drama tăng 200%.",
+    "Suzu gọi Phúc Gà nhanh hơn tốc độ mạng nhà mình."
+];
+
+const phuc = [
+    "Phúc Gà đã xuất hiện! Xin chia buồn với đối thủ 🐔",
+    "Phúc Gà không sợ bất kỳ ai, chỉ sợ hết pin! 💀",
+    "Đang giao tranh? Phúc Gà bảo: đợi tao tí!",
+    "Phúc Gà vào game với ước mơ, ra game với bài học."
+];
+
+const both = [
+    "Hai ông chơi game hay đang thi xem ai báo hơn vậy? 💀",
+    "Suzu và Phúc Gà: duo bất bại... trong khoản tấu hài!",
+    "Khi hai ông cùng online, server tự hỏi hôm nay là ngày gì 😂",
+    "Một người tạo drama, một người tiếp sức. Đúng là định mệnh!",
+    "Tình bạn keo sơn, combat thì mỗi người một hướng. 🤣"
+];
+
+function randomJoke(list) {
+    const joke = list[Math.floor(Math.random() * list.length)];
+    document.getElementById("joke").textContent = joke;
+}
+
+function roastSuzu() {
+    randomJoke(suzu);
+}
+
+function roastPhuc() {
+    randomJoke(phuc);
+}
+
+function roastBoth() {
+    randomJoke(both);
+}
+</script>
+
+</body>
+</html>
+```
